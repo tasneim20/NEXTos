@@ -2,18 +2,12 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-const locales = ["en", "ar"] as const;
+const locales = ["en", "ar"];
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: Promise<{ lang: string }>;
-}) {
+export default async function LocaleLayout({ children, params }) {
   const { lang } = await params;
 
-  if (!locales.includes(lang as (typeof locales)[number])) {
+  if (!locales.includes(lang)) {
     notFound();
   }
 

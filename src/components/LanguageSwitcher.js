@@ -6,7 +6,7 @@ export default function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const switchLang = (lang: string) => {
+  const switchLang = (lang) => {
     const newPath = pathname.replace(/^\/(en|ar)/, `/${lang}`);
     router.push(newPath);
   };
