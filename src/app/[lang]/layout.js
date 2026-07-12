@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import "../globals.css";
 
 const locales = ["en", "ar"];
 
