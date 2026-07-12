@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,8 +18,9 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     }
   },
   "include": [
@@ -28,7 +29,13 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "src/components/LanguageSwitcher.tsxx",
+    "src/app/layout.js",
+    "src/app/[lang]/layout.js",
+    "src/app/[lang]/login/page.js",
+    "src/middleware.js",
+    "next.config.ts",
+    "src/i18n/request.ts"
   ],
   "exclude": ["node_modules"]
 }
